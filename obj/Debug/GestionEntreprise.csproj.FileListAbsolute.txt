@@ -1,0 +1,11 @@
+C:\Users\tanol.DYLANE\OneDrive - MONCCNB\2CCNB\Session1\C#.NET\Devoirs\GestionEntreprise\bin\Debug\GestionEntreprise.exe.config
+C:\Users\tanol.DYLANE\OneDrive - MONCCNB\2CCNB\Session1\C#.NET\Devoirs\GestionEntreprise\bin\Debug\GestionEntreprise.exe
+C:\Users\tanol.DYLANE\OneDrive - MONCCNB\2CCNB\Session1\C#.NET\Devoirs\GestionEntreprise\bin\Debug\GestionEntreprise.pdb
+C:\Users\tanol.DYLANE\OneDrive - MONCCNB\2CCNB\Session1\C#.NET\Devoirs\GestionEntreprise\obj\Debug\GestionEntreprise.csproj.AssemblyReference.cache
+C:\Users\tanol.DYLANE\OneDrive - MONCCNB\2CCNB\Session1\C#.NET\Devoirs\GestionEntreprise\obj\Debug\GestionEntreprise.Employes.resources
+C:\Users\tanol.DYLANE\OneDrive - MONCCNB\2CCNB\Session1\C#.NET\Devoirs\GestionEntreprise\obj\Debug\GestionEntreprise.GestionEntrepriseForm.resources
+C:\Users\tanol.DYLANE\OneDrive - MONCCNB\2CCNB\Session1\C#.NET\Devoirs\GestionEntreprise\obj\Debug\GestionEntreprise.Properties.Resources.resources
+C:\Users\tanol.DYLANE\OneDrive - MONCCNB\2CCNB\Session1\C#.NET\Devoirs\GestionEntreprise\obj\Debug\GestionEntreprise.csproj.GenerateResource.cache
+C:\Users\tanol.DYLANE\OneDrive - MONCCNB\2CCNB\Session1\C#.NET\Devoirs\GestionEntreprise\obj\Debug\GestionEntreprise.csproj.CoreCompileInputs.cache
+C:\Users\tanol.DYLANE\OneDrive - MONCCNB\2CCNB\Session1\C#.NET\Devoirs\GestionEntreprise\obj\Debug\GestionEntreprise.exe
+C:\Users\tanol.DYLANE\OneDrive - MONCCNB\2CCNB\Session1\C#.NET\Devoirs\GestionEntreprise\obj\Debug\GestionEntreprise.pdb
