@@ -93,6 +93,16 @@ namespace GestionEntreprise.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_aide_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_aide_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap isolated_icon_of_align_symbol_free_vector {
             get {
                 object obj = ResourceManager.GetObject("isolated_icon_of_align_symbol_free_vector", resourceCulture);
