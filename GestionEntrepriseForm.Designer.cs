@@ -107,7 +107,7 @@
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(872, 410);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(872, 407);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -295,7 +295,7 @@
             this.helpToolStripButton});
             this.gestionEntrepiseToolStripComboBox1.Location = new System.Drawing.Point(4, 31);
             this.gestionEntrepiseToolStripComboBox1.Name = "gestionEntrepiseToolStripComboBox1";
-            this.gestionEntrepiseToolStripComboBox1.Size = new System.Drawing.Size(677, 28);
+            this.gestionEntrepiseToolStripComboBox1.Size = new System.Drawing.Size(677, 31);
             this.gestionEntrepiseToolStripComboBox1.TabIndex = 1;
             // 
             // toolStripSeparator6
