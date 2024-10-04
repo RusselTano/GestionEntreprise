@@ -92,5 +92,8 @@
   <ItemGroup>
     <None Include="img\icons8-aide-48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\jumelles.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
