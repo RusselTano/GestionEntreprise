@@ -19,12 +19,13 @@ namespace GestionEntreprise
         }
         private void associerImages()
         {
-            boldToolStripButton.Image = Properties.Resources.b;
-            italicToolStripButton.Image = Properties.Resources.I;
-            underlineToolStripButton.Image = Properties.Resources.u;
-            alignLeftToolStripButton.Image = Properties.Resources.left;
-            alignCenterToolStripButton.Image = Properties.Resources.center;
-            alignRightToolStripButton.Image = Properties.Resources.right;
+            nouveauToolStripMenuItem.Image = nouveauToolStripButton.Image;
+            ouvrirToolStripMenuItem.Image = ouvrirToolStripButton.Image;
+            enregistrerSousToolStripMenuItem.Image = enregistrerToolStripButton.Image;
+            couperToolStripMenuItem.Image= couperToolStripButton.Image;
+            copierToolStripMenuItem.Image = copierToolStripButton.Image;
+            collerToolStripMenuItem.Image = collerToolStripButton.Image;
+            aideSurListesEmployeesToolStripMenuItem.Image = aideToolStripButton.Image;
         }
         private void GestionEntrepriseForm_Load(object sender, EventArgs e)
         {
