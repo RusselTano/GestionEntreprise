@@ -36,8 +36,10 @@ namespace GestionEntreprise
         }
         private void GestionEntrepriseForm_Load(object sender, EventArgs e)
         {
-            this.KeyPreview = true;
+            if (Control.IsKeyLocked(Keys.CapsLock)) semiVisibleToolStripStatusLabel.Text = "MAJ";
+            else semiVisibleToolStripStatusLabel.Text = "";
             DesactiverOperationsMenusBarreOutils();
+            visibleToolStripStatusLabel.Text = "INS";
             g.InitMessagesErreurs();
             //appel de la methode EnlevezCrochet
             g.EnleverCrochetSousMenus(gestionnaireToolStripMenuItem);
@@ -336,7 +338,7 @@ namespace GestionEntreprise
             if (this.ActiveMdiChild == null)
             {
                 DesactiverOperationsMenusBarreOutils();
-                creerOuOuvrirEmployeeToolStripStatusLabel.Text = "Créer ou nouveau formulaire enfant..";
+                creerOuOuvrirEmployeeToolStripStatusLabel.Text = "creer ou ouvrir un Employee";
             }
             else
             {
@@ -349,7 +351,7 @@ namespace GestionEntreprise
                 }
                 else
                 {
-                    creerOuOuvrirEmployeeToolStripStatusLabel.Text = "Créer ou nouveau formulaire enfant..";
+                    creerOuOuvrirEmployeeToolStripStatusLabel.Text = "creer ou ouvrir un Employee";
                 }
                 creerOuOuvrirEmployeeToolStripStatusLabel.Text = client.Text;
             }
@@ -429,8 +431,16 @@ namespace GestionEntreprise
             if (Control.IsKeyLocked(Keys.CapsLock)) semiVisibleToolStripStatusLabel.Text = "MAJ";
             else semiVisibleToolStripStatusLabel.Text = "";
 
-            if (e.KeyCode == Keys.Insert) visibleToolStripStatusLabel.Text = "INS";
-            else visibleToolStripStatusLabel.Text = "";
+            if (e.KeyCode == Keys.Insert)
+            {
+                if (visibleToolStripStatusLabel.Text == "INS")
+                {
+                    visibleToolStripStatusLabel.Text = "RFP";
+                    Employes client = (Employes)this.ActiveMdiChild;
+                    client.ModeInsertion = false;
+                }
+                else visibleToolStripStatusLabel.Text = "";
+            }
         }
         #endregion
 

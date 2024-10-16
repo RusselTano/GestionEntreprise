@@ -41,85 +41,77 @@
             // nomLabel
             // 
             this.nomLabel.AutoSize = true;
-            this.nomLabel.Location = new System.Drawing.Point(18, 38);
-            this.nomLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nomLabel.Location = new System.Drawing.Point(13, 25);
             this.nomLabel.Name = "nomLabel";
-            this.nomLabel.Size = new System.Drawing.Size(59, 25);
+            this.nomLabel.Size = new System.Drawing.Size(39, 16);
             this.nomLabel.TabIndex = 0;
             this.nomLabel.Text = "Nom:";
             // 
             // prenomLabel
             // 
             this.prenomLabel.AutoSize = true;
-            this.prenomLabel.Location = new System.Drawing.Point(18, 96);
-            this.prenomLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.prenomLabel.Location = new System.Drawing.Point(13, 64);
             this.prenomLabel.Name = "prenomLabel";
-            this.prenomLabel.Size = new System.Drawing.Size(86, 25);
+            this.prenomLabel.Size = new System.Drawing.Size(57, 16);
             this.prenomLabel.TabIndex = 1;
             this.prenomLabel.Text = "Prénom:";
             // 
             // telephoneLabel
             // 
             this.telephoneLabel.AutoSize = true;
-            this.telephoneLabel.Location = new System.Drawing.Point(16, 164);
-            this.telephoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.telephoneLabel.Location = new System.Drawing.Point(12, 109);
             this.telephoneLabel.Name = "telephoneLabel";
-            this.telephoneLabel.Size = new System.Drawing.Size(112, 25);
+            this.telephoneLabel.Size = new System.Drawing.Size(76, 16);
             this.telephoneLabel.TabIndex = 2;
             this.telephoneLabel.Text = "Téléphone:";
             // 
             // nomTextBox
             // 
-            this.nomTextBox.Location = new System.Drawing.Point(176, 38);
-            this.nomTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nomTextBox.Location = new System.Drawing.Point(128, 25);
             this.nomTextBox.Name = "nomTextBox";
-            this.nomTextBox.Size = new System.Drawing.Size(425, 29);
+            this.nomTextBox.Size = new System.Drawing.Size(310, 22);
             this.nomTextBox.TabIndex = 3;
             this.nomTextBox.TextChanged += new System.EventHandler(this.clientTextBox_TextChanged);
             // 
             // prenomTextBox
             // 
-            this.prenomTextBox.Location = new System.Drawing.Point(176, 96);
-            this.prenomTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.prenomTextBox.Location = new System.Drawing.Point(128, 64);
             this.prenomTextBox.Name = "prenomTextBox";
-            this.prenomTextBox.Size = new System.Drawing.Size(425, 29);
+            this.prenomTextBox.Size = new System.Drawing.Size(310, 22);
             this.prenomTextBox.TabIndex = 4;
             this.prenomTextBox.TextChanged += new System.EventHandler(this.clientTextBox_TextChanged);
             // 
             // infoLabel
             // 
             this.infoLabel.AutoSize = true;
-            this.infoLabel.Location = new System.Drawing.Point(29, 213);
-            this.infoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.infoLabel.Location = new System.Drawing.Point(21, 142);
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(50, 25);
+            this.infoLabel.Size = new System.Drawing.Size(31, 16);
             this.infoLabel.TabIndex = 5;
             this.infoLabel.Text = "Info:";
             // 
             // infoRichTextBox
             // 
-            this.infoRichTextBox.Location = new System.Drawing.Point(205, 213);
-            this.infoRichTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.infoRichTextBox.Location = new System.Drawing.Point(149, 142);
             this.infoRichTextBox.Name = "infoRichTextBox";
-            this.infoRichTextBox.Size = new System.Drawing.Size(366, 212);
-            this.infoRichTextBox.TabIndex = 6;
+            this.infoRichTextBox.Size = new System.Drawing.Size(267, 143);
+            this.infoRichTextBox.TabIndex = 1;
             this.infoRichTextBox.Text = "";
             this.infoRichTextBox.SelectionChanged += new System.EventHandler(this.infoRichTextBox_SelectionChanged);
             // 
             // telephoneMaskedTextBox
             // 
-            this.telephoneMaskedTextBox.Location = new System.Drawing.Point(176, 165);
-            this.telephoneMaskedTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.telephoneMaskedTextBox.Location = new System.Drawing.Point(128, 110);
             this.telephoneMaskedTextBox.Mask = "(999) 000-0000";
             this.telephoneMaskedTextBox.Name = "telephoneMaskedTextBox";
-            this.telephoneMaskedTextBox.Size = new System.Drawing.Size(425, 29);
+            this.telephoneMaskedTextBox.Size = new System.Drawing.Size(310, 22);
             this.telephoneMaskedTextBox.TabIndex = 8;
             // 
             // Employes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 464);
+            this.ClientSize = new System.Drawing.Size(505, 309);
             this.Controls.Add(this.telephoneMaskedTextBox);
             this.Controls.Add(this.infoRichTextBox);
             this.Controls.Add(this.infoLabel);
@@ -128,7 +120,6 @@
             this.Controls.Add(this.telephoneLabel);
             this.Controls.Add(this.prenomLabel);
             this.Controls.Add(this.nomLabel);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Employes";
             this.Text = "Employes";
             this.Activated += new System.EventHandler(this.Employes_Activated);

@@ -44,6 +44,7 @@ namespace GestionEntreprise
         private void Employes_Load(object sender, EventArgs e)
         {
             g.InitMessagesErreurs();
+            infoRichTextBox.Focus();
         }
 
         #endregion
@@ -270,7 +271,6 @@ namespace GestionEntreprise
 
                 GestionEntrepriseForm parent = (GestionEntrepriseForm)this.MdiParent;
 
-                parent.visibleToolStripStatusLabel.Text = "RFP";
 
                 //RichTextBox richTextBox = (RichTextBox)client.Controls["infoRichTextBox"];
 
