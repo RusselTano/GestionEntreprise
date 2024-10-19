@@ -19,28 +19,35 @@ using System.Windows.Forms;
 using g = GestionEntreprise.GestionEntrepriseClassGenerale;
 using ce = GestionEntreprise.GestionEntrepriseClassGenerale.Erreurs;
 using System.Globalization;
+using System.Drawing.Text;
 
 namespace GestionEntreprise
 {
     public partial class GestionEntrepriseForm : Form
     {
-        #region variable
+        #region variables
         private int compteurEnfant = 1;
         private OpenFileDialog ofd;
+        public float fontSize = 8f;
+        public string fontFamily = GestionEntrepriseForm.DefaultFont.Name;
+        public FontStyle fontStyle = FontStyle.Regular;
         #endregion
 
-        #region initialisation
+        #region Initialisation
         public GestionEntrepriseForm()
         {
             InitializeComponent();
         }
         private void GestionEntrepriseForm_Load(object sender, EventArgs e)
         {
+            //Mode insertion  et refrappe
             if (Control.IsKeyLocked(Keys.CapsLock)) semiVisibleToolStripStatusLabel.Text = "MAJ";
             else semiVisibleToolStripStatusLabel.Text = "";
             DesactiverOperationsMenusBarreOutils();
             visibleToolStripStatusLabel.Text = "INS";
+
             g.InitMessagesErreurs();
+
             //appel de la methode EnlevezCrochet
             g.EnleverCrochetSousMenus(gestionnaireToolStripMenuItem);
             this.gestionEntrepriseMenuStrip.MdiWindowListItem = this.fenetreToolStripMenuItem;
@@ -50,14 +57,19 @@ namespace GestionEntreprise
             ofd.AddExtension = true;
             ofd.CheckFileExists = true;
             ofd.CheckPathExists = true;
-            associerImages();
+            AssocierImages();
             languageToolStripStatusLabel.Text = CultureInfo.CurrentCulture.NativeName;
+
+            // Peupler les ToolStripComboBox.
+            policesToolStripComboBox.SelectedIndexChanged -= policesToolStripComboBox_SelectedIndexChanged;
+            AfficherPolicesInstallees();
+            policesToolStripComboBox.SelectedIndexChanged += policesToolStripComboBox_SelectedIndexChanged;
+            AfficherTaillesPolices();
         }
         #endregion
 
-        #region associer image
-
-        private void associerImages()
+        #region Associer image
+        private void AssocierImages()
         {
             nouveauToolStripMenuItem.Image = nouveauToolStripButton.Image;
             ouvrirToolStripMenuItem.Image = ouvrirToolStripButton.Image;
@@ -67,13 +79,11 @@ namespace GestionEntreprise
             collerToolStripMenuItem.Image = collerToolStripButton.Image;
             aideSurListesEmployeesToolStripMenuItem.Image = aideToolStripButton.Image;
         }
-
-
         #endregion
 
-        #region methode partages
+        #region Methode partages
 
-        #region nouveau formulaire enfants
+        #region Nouveau formulaire enfants
         private void FichierNouveauDocument_Click(object sender, EventArgs e)
         {
             try
@@ -88,13 +98,12 @@ namespace GestionEntreprise
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(g.tMessagesErreursStr[(int)ce.CEErreurIndeterminee], "EXception", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 MessageBox.Show(ex.ToString(), "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
 
-        #region  changer le style
+        #region  Changer le style
         private void StyleToolStripMenuItems_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem menuItem = sender as ToolStripMenuItem;
@@ -112,7 +121,7 @@ namespace GestionEntreprise
         }
         #endregion
 
-        #region layout
+        #region MDI Layout
         private void FenetreMDILayout_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem menuItem = sender as ToolStripMenuItem;
@@ -128,7 +137,7 @@ namespace GestionEntreprise
         }
         #endregion
 
-        #region changer la position
+        #region Changer la position
         // Méthode partagée pour gérer l'ajout de contrôle dans les panneaux
         private void QuatrePaneaux_ControlAdded(object sender, ControlEventArgs e)
         {
@@ -237,7 +246,6 @@ namespace GestionEntreprise
                 MessageBox.Show(g.tMessagesErreursStr[(int)ce.CEErreurOuverture], "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         #endregion
 
         #region Enregistrer ou Enregistrer sous
@@ -273,12 +281,10 @@ namespace GestionEntreprise
         private void fermerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Méthode 1:
-
             if (this.ActiveMdiChild != null)
                 this.ActiveMdiChild.Close();
 
             // Méthode 2:
-
             if (this.ActiveControl != null)
             {
                 Employes oEnfant = (Employes)this.ActiveControl;
@@ -286,7 +292,6 @@ namespace GestionEntreprise
             }
 
             // Méthode 3:
-
             if (this.MdiChildren.Count() != 0)
             {
                 this.ActiveMdiChild.Close();
@@ -331,7 +336,7 @@ namespace GestionEntreprise
         }
         #endregion
 
-        #region parent MDI
+        #region Parent MDI
         private void GestionEntrepriseForm_MdiChildActivate(object sender, EventArgs e)
         {
 
@@ -345,20 +350,15 @@ namespace GestionEntreprise
                 ActiverOperationsMenusBarreOutils();
                 Employes client = (Employes)this.ActiveMdiChild;
 
-                if (client.ModeInsertion)
-                {
-                    creerOuOuvrirEmployeeToolStripStatusLabel.Text = client.Text;
-                }
-                else
-                {
-                    creerOuOuvrirEmployeeToolStripStatusLabel.Text = "creer ou ouvrir un Employee";
-                }
+                if (client.ModeInsertion) creerOuOuvrirEmployeeToolStripStatusLabel.Text = client.Text;
+                else creerOuOuvrirEmployeeToolStripStatusLabel.Text = "creer ou ouvrir un Employee";
+
                 creerOuOuvrirEmployeeToolStripStatusLabel.Text = client.Text;
             }
         }
         #endregion
 
-        #region  changer police
+        #region  Changement du style
         private void StylePolice_Click(object sender, EventArgs e)
         {
             try
@@ -366,30 +366,18 @@ namespace GestionEntreprise
                 Employes client = (Employes)this.ActiveMdiChild;
 
                 // Appeler Enregistrer ou EnregistrerSous selon le sender (à définir selon votre logique)
-                if (sender == boldToolStripButton)
-                {
-                    client.ChangerAttributsPolice(FontStyle.Bold);
-
-                }
-                else if (sender == italicToolStripButton)
-                {
-                    client.ChangerAttributsPolice(FontStyle.Italic);
-                }
-                else if (sender == underlineToolStripButton)
-                {
-                    client.ChangerAttributsPolice(FontStyle.Underline);
-                }
+                if (sender == boldToolStripButton) client.ChangerAttributsPolice(FontStyle.Bold);
+                else if (sender == italicToolStripButton) client.ChangerAttributsPolice(FontStyle.Italic);
+                else if (sender == underlineToolStripButton) client.ChangerAttributsPolice(FontStyle.Underline);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(g.tMessagesErreursStr[(int)ce.CEErreurStylePolice], "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
         #endregion
 
-        #region  desactiver
+        #region  Desactiver
         private void DesactiverOperationsMenusBarreOutils()
         {
             foreach (ToolStripItem oMainToolStripItem in gestionEntrepriseMenuStrip.Items)
@@ -399,14 +387,10 @@ namespace GestionEntreprise
                     ToolStripMenuItem mainItem = (ToolStripMenuItem)oMainToolStripItem;
                     foreach (ToolStripItem oCourantToolStripItem in mainItem.DropDownItems)
                     {
-                        if (oCourantToolStripItem is ToolStripMenuItem)
-                        {
-                            oCourantToolStripItem.Enabled = false;
-                        }
+                        if (oCourantToolStripItem is ToolStripMenuItem) oCourantToolStripItem.Enabled = false;
                     }
                 }
             }
-
 
             foreach (ToolStripItem boutonToolStripItem in gestionEntrepiseToolStrip.Items)
             {
@@ -422,7 +406,6 @@ namespace GestionEntreprise
             aideSurListesEmployeesToolStripMenuItem.Enabled = true;
             aideToolStripButton.Enabled = true;
         }
-
         #endregion
 
         #region KeyDown CapsLock && Insert
@@ -444,7 +427,7 @@ namespace GestionEntreprise
         }
         #endregion
 
-        #region activer
+        #region Activer
         private void ActiverOperationsMenusBarreOutils()
         {
             foreach (ToolStripItem oMainToolStripItem in gestionEntrepriseMenuStrip.Items)
@@ -454,10 +437,7 @@ namespace GestionEntreprise
                     ToolStripMenuItem mainItem = (ToolStripMenuItem)oMainToolStripItem;
                     foreach (ToolStripItem oCourantToolStripItem in mainItem.DropDownItems)
                     {
-                        if (oCourantToolStripItem is ToolStripMenuItem)
-                        {
-                            oCourantToolStripItem.Enabled = true;
-                        }
+                        if (oCourantToolStripItem is ToolStripMenuItem) oCourantToolStripItem.Enabled = true;
                     }
                 }
             }
@@ -465,6 +445,7 @@ namespace GestionEntreprise
             {
                 boutonToolStripItem.Enabled = true;
             }
+
             // Désactiver certains éléments en fonction du contenu du presse-papiers
             collerToolStripMenuItem.Enabled = Clipboard.ContainsText() || Clipboard.ContainsImage();
             copierToolStripButton.Enabled = false;
@@ -509,5 +490,86 @@ namespace GestionEntreprise
             }
         }
         #endregion
+
+        #region Typographie
+        private void policesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Employes client = (Employes)this.ActiveMdiChild;
+                gestionEntrepriseFontDialog.Font = client.infoRichTextBox.SelectionFont;
+
+                if (gestionEntrepriseFontDialog.ShowDialog() == DialogResult.OK)
+                    client.infoRichTextBox.SelectionFont = gestionEntrepriseFontDialog.Font;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void policesToolStripComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Employes client = (Employes)this.ActiveMdiChild;
+                if (client.infoRichTextBox != null)
+                {
+                    fontFamily = policesToolStripComboBox.SelectedItem.ToString();
+                    client.infoRichTextBox.SelectionFont = new Font(fontFamily, fontSize, fontStyle);
+                    client.infoRichTextBox.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void taillesToolStripComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Employes client = (Employes)this.ActiveMdiChild;
+
+            fontSize = float.Parse(taillesToolStripComboBox.Text);
+            client.infoRichTextBox.SelectionFont = new Font(fontFamily, fontSize, fontStyle);
+            client.infoRichTextBox.Focus();
+        }
+
+        private void AfficherPolicesInstallees()
+        {
+            try
+            {
+                InstalledFontCollection oInstalledFonts = new InstalledFontCollection();
+
+                foreach (FontFamily oFontFamily in oInstalledFonts.Families)
+                {
+                    policesToolStripComboBox.Items.Add(oFontFamily.Name);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void AfficherTaillesPolices()
+        {
+            try
+            {
+                // Ajoutez les tailles de police dans le ToolStripComboBox
+                taillesToolStripComboBox.Items.Add(8);
+                taillesToolStripComboBox.Items.Add(10);
+                taillesToolStripComboBox.Items.Add(12);
+                taillesToolStripComboBox.Items.Add(14);
+                taillesToolStripComboBox.Items.Add(16);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
     }
 }

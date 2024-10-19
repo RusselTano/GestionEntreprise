@@ -119,9 +119,7 @@ namespace GestionEntreprise
                             this.Dispose();
                             break;
                     }
-
                 }
-
             }
             catch (Exception ex)
             {
@@ -131,7 +129,6 @@ namespace GestionEntreprise
         #endregion
 
         #region Changement dans TextBox
-
         private void clientTextBox_TextChanged(object sender, EventArgs e)
         {
             Modification = true;
@@ -139,16 +136,12 @@ namespace GestionEntreprise
         #endregion
 
         #region Enregistrer
-
         public void Enregistrer()
         {
             try
             {
-
                 if (infoRichTextBox.Modified || Modification)
                 {
-
-
                     if (!Enregistrement)
                         EnregistrerSous();
                     else
@@ -156,7 +149,6 @@ namespace GestionEntreprise
                         try
                         {
                             // Utiliser une méthode pour Sauvegarder...
-
                             RichTextBox ortf = new RichTextBox();
 
                             ortf.Rtf = infoRichTextBox.Rtf;
@@ -166,8 +158,6 @@ namespace GestionEntreprise
                             ortf.SelectedText = infoRichTextBox.Text + Environment.NewLine;
 
                             ortf.SaveFile(this.Text);
-
-                            // clientRichTextBox.SaveFile(this.Text);
 
                             // Pas de changement
                             Modification = false;
@@ -205,7 +195,6 @@ namespace GestionEntreprise
                 sfd.DefaultExt = ".rtf";
                 sfd.AddExtension = true;
 
-
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     // Utiliser une méthode pour Sauvegarder...
@@ -215,19 +204,16 @@ namespace GestionEntreprise
                         return;
                     }
                     //Ici, juste le contenu du RichTextBox est sauvegardé!
-
                     string filePath = sfd.FileName;
                     this.Text = filePath;
 
                     SaveToRichTextBox(filePath);
-
 
                     // Enregistré et pas de changement
                     Enregistrement = true;
                     Modification = false;
                     infoRichTextBox.Modified = false;
                 }
-
             }
             catch (Exception ex)
             {
@@ -248,18 +234,15 @@ namespace GestionEntreprise
             tempRichTextBox.SelectionStart = 0;
             tempRichTextBox.SelectionLength = 0;
 
-
             tempRichTextBox.SelectedText = nomTextBox.Text + Environment.NewLine;
             tempRichTextBox.SelectedText = prenomTextBox.Text + Environment.NewLine;
             tempRichTextBox.SelectedText = telephoneMaskedTextBox.Text + Environment.NewLine;
-
 
             // Enregistrer dans un fichier si un chemin est fourni
             tempRichTextBox.SaveFile(filePath);
 
             infoRichTextBox.Modified = false;
         }
-
         #endregion
 
         #region SelectionChanged
@@ -271,19 +254,21 @@ namespace GestionEntreprise
 
                 GestionEntrepriseForm parent = (GestionEntrepriseForm)this.MdiParent;
 
-
-                //RichTextBox richTextBox = (RichTextBox)client.Controls["infoRichTextBox"];
-
                 // Activer ou désactiver les boutons Gras, Italique, Souligné
                 parent.boldToolStripButton.Checked = infoRichTextBox.SelectionFont.Bold;
                 parent.italicToolStripButton.Checked = infoRichTextBox.SelectionFont.Italic;
                 parent.underlineToolStripButton.Checked = infoRichTextBox.SelectionFont.Underline;
 
+                //Police
+                if (infoRichTextBox.SelectionFont != null)
+                {
+                    parent.policesToolStripComboBox.Text = infoRichTextBox.SelectionFont.FontFamily.Name;
+                    parent.taillesToolStripComboBox.Text = infoRichTextBox.SelectionFont.Size.ToString();
+                }
+
                 // Vérifier le contenu du presse - papiers
-                if (Clipboard.ContainsText() || Clipboard.ContainsImage())
-                    parent.collerToolStripMenuItem.Enabled = true;
-                else
-                    parent.collerToolStripMenuItem.Enabled = false;
+                if (Clipboard.ContainsText() || Clipboard.ContainsImage()) parent.collerToolStripMenuItem.Enabled = true;
+                else parent.collerToolStripMenuItem.Enabled = false;
 
                 // Activer ou désactiver les boutons Copier et Couper
                 parent.couperToolStripMenuItem.Enabled = infoRichTextBox.SelectedText.Length > 0;
@@ -292,7 +277,6 @@ namespace GestionEntreprise
                 parent.copierToolStripButton.Enabled = parent.copierToolStripMenuItem.Enabled;
 
                 //Vérifier l'alignement
-
                 switch (infoRichTextBox.SelectionAlignment)
                 {
                     case HorizontalAlignment.Left:
@@ -320,29 +304,30 @@ namespace GestionEntreprise
         #endregion
 
         #region Activated
-
         private void Employes_Activated(object sender, EventArgs e)
         {
             infoRichTextBox_SelectionChanged(sender, e);
-
         }
         #endregion
 
         #region ChangerAttributs
         public void ChangerAttributsPolice(FontStyle style)
         {
+            GestionEntrepriseForm parent = (GestionEntrepriseForm)this.MdiParent;
+
             try
             {
                 Employes client = (Employes)this.ActiveMdiChild;
-
-
 
                 if (infoRichTextBox.SelectionFont != null && infoRichTextBox.SelectionFont.FontFamily.IsStyleAvailable(style))
                 {
                     Font currentFont = infoRichTextBox.SelectionFont;
                     FontStyle newFontStyle = currentFont.Style ^ style; // Toggle the style
+                    parent.fontFamily = currentFont.FontFamily.ToString();
+                    parent.fontStyle = newFontStyle;
+                    parent.fontSize = currentFont.Size;
 
-                    infoRichTextBox.SelectionFont = new Font(currentFont.FontFamily, currentFont.Size, newFontStyle);
+                    infoRichTextBox.SelectionFont = new Font(parent.fontFamily, parent.fontSize, parent.fontStyle);
                 }
             }
             catch (Exception ex)
