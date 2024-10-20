@@ -3,19 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|GestionEntreprise||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|c:\\users\\tanol.dylane\\onedrive - monccnb\\2ccnb\\session1\\c#.net\\devoirs\\gestionentreprise\\rechercherform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|solutionrelative:rechercherform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|c:\\users\\tanol.dylane\\onedrive - monccnb\\2ccnb\\session1\\c#.net\\devoirs\\gestionentreprise\\rechercherform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|solutionrelative:rechercherform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|c:\\users\\tanol.dylane\\onedrive - monccnb\\2ccnb\\session1\\c#.net\\devoirs\\gestionentreprise\\rechercherform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|solutionrelative:rechercherform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|c:\\users\\tanol.dylane\\onedrive - monccnb\\2ccnb\\session1\\c#.net\\devoirs\\gestionentreprise\\gestionentrepriseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|solutionrelative:gestionentrepriseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\gestionentrepriseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|solutionrelative:gestionentrepriseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\employes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|solutionrelative:employes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\gestionentrepriseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|solutionrelative:gestionentrepriseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\employes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -24,9 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\employes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|solutionrelative:employes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C1A70DA-A80B-4C3E-980E-2FCABA99EC4D}|GestionEntreprise.csproj|c:\\users\\tanol.dylane\\onedrive - monccnb\\2ccnb\\session1\\c#.net\\devoirs\\gestionentreprise\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,73 +42,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 268,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GestionEntreprise",
-              "DocumentMoniker": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\GestionEntreprise.csproj",
-              "RelativeDocumentMoniker": "GestionEntreprise.csproj",
-              "ToolTip": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\GestionEntreprise.csproj*",
-              "RelativeToolTip": "GestionEntreprise.csproj*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-10-20T07:11:43.019Z",
+              "DocumentIndex": 2,
+              "Title": "RechercherForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\RechercherForm.Designer.cs",
+              "RelativeDocumentMoniker": "RechercherForm.Designer.cs",
+              "ToolTip": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\RechercherForm.Designer.cs",
+              "RelativeToolTip": "RechercherForm.Designer.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAMwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T23:48:27.425Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "RechercherForm.cs",
+              "DocumentMoniker": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\RechercherForm.cs",
+              "RelativeDocumentMoniker": "RechercherForm.cs",
+              "ToolTip": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\RechercherForm.cs",
+              "RelativeToolTip": "RechercherForm.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T23:48:23.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RechercherForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\RechercherForm.cs",
+              "RelativeDocumentMoniker": "RechercherForm.cs",
+              "ToolTip": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\RechercherForm.cs [Design]",
+              "RelativeToolTip": "RechercherForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T23:42:19.51Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Employes.cs",
               "DocumentMoniker": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\Employes.cs",
               "RelativeDocumentMoniker": "Employes.cs",
               "ToolTip": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\Employes.cs",
               "RelativeToolTip": "Employes.cs",
-              "ViewState": "AgIAACcBAAAAAAAAAAAWwE8BAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAMwE8BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T13:54:39.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-10T13:54:39.051Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "GestionEntrepriseForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\GestionEntrepriseForm.cs",
               "RelativeDocumentMoniker": "GestionEntrepriseForm.cs",
-              "ToolTip": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\GestionEntrepriseForm.cs [Design]*",
-              "RelativeToolTip": "GestionEntrepriseForm.cs [Design]*",
+              "ToolTip": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\GestionEntrepriseForm.cs [Design]",
+              "RelativeToolTip": "GestionEntrepriseForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T07:57:20.79Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "GestionEntrepriseForm.cs",
               "DocumentMoniker": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\GestionEntrepriseForm.cs",
               "RelativeDocumentMoniker": "GestionEntrepriseForm.cs",
-              "ToolTip": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\GestionEntrepriseForm.cs*",
-              "RelativeToolTip": "GestionEntrepriseForm.cs*",
-              "ViewState": "AgIAABICAAAAAAAAAAAQwCICAABJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\GestionEntrepriseForm.cs",
+              "RelativeToolTip": "GestionEntrepriseForm.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAIwAoCAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-10T13:48:44.694Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Employes.cs [Design]",
               "DocumentMoniker": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\Employes.cs",
               "RelativeDocumentMoniker": "Employes.cs",
               "ToolTip": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\Employes.cs [Design]",
               "RelativeToolTip": "Employes.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T13:54:36.135Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-10T13:54:36.135Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Employes.Designer.cs",
               "DocumentMoniker": "C:\\Users\\tanol.DYLANE\\OneDrive - MONCCNB\\2CCNB\\Session1\\C#.NET\\Devoirs\\GestionEntreprise\\Employes.Designer.cs",
               "RelativeDocumentMoniker": "Employes.Designer.cs",
@@ -110,8 +140,7 @@
               "RelativeToolTip": "Employes.Designer.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAAAmwGQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T13:33:00.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T13:33:00.525Z"
             }
           ]
         }

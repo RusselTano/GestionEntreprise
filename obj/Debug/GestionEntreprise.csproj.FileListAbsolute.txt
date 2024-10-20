@@ -20,3 +20,4 @@ C:\Users\kengm\Desktop\cour\AUTOMNES 2024\PROG1236\projet\GestionEntreprise\obj\
 C:\Users\kengm\Desktop\cour\AUTOMNES 2024\PROG1236\projet\GestionEntreprise\obj\Debug\GestionEntreprise.csproj.CoreCompileInputs.cache
 C:\Users\kengm\Desktop\cour\AUTOMNES 2024\PROG1236\projet\GestionEntreprise\obj\Debug\GestionEntreprise.exe
 C:\Users\kengm\Desktop\cour\AUTOMNES 2024\PROG1236\projet\GestionEntreprise\obj\Debug\GestionEntreprise.pdb
+C:\Users\tanol.DYLANE\OneDrive - MONCCNB\2CCNB\Session1\C#.NET\Devoirs\GestionEntreprise\obj\Debug\GestionEntreprise.RechercherForm.resources
