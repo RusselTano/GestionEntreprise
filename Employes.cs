@@ -254,10 +254,17 @@ namespace GestionEntreprise
 
                 GestionEntrepriseForm parent = (GestionEntrepriseForm)this.MdiParent;
 
-                // Activer ou désactiver les boutons Gras, Italique, Souligné
-                parent.boldToolStripButton.Checked = infoRichTextBox.SelectionFont.Bold;
-                parent.italicToolStripButton.Checked = infoRichTextBox.SelectionFont.Italic;
-                parent.underlineToolStripButton.Checked = infoRichTextBox.SelectionFont.Underline;
+                if (parent != null)
+                {
+                    // Vérifiez si les boutons ne sont pas null
+                    if (parent.boldToolStripButton != null && parent.italicToolStripButton != null)
+                    {
+                        // Activer ou désactiver les boutons Gras, Italique, Souligné
+                        parent.boldToolStripButton.Checked = infoRichTextBox.SelectionFont?.Bold ?? false;
+                        parent.italicToolStripButton.Checked = infoRichTextBox.SelectionFont?.Italic ?? false;
+                        parent.underlineToolStripButton.Checked = infoRichTextBox.SelectionFont?.Underline ?? false;
+                    }
+                }
 
                 //Police
                 if (infoRichTextBox.SelectionFont != null)
@@ -322,10 +329,10 @@ namespace GestionEntreprise
                 if (infoRichTextBox.SelectionFont != null && infoRichTextBox.SelectionFont.FontFamily.IsStyleAvailable(style))
                 {
                     Font currentFont = infoRichTextBox.SelectionFont;
-                    FontStyle newFontStyle = currentFont.Style ^ style; // Toggle the style
-                    parent.fontFamily = currentFont.FontFamily.ToString();
-                    parent.fontStyle = newFontStyle;
+
+                    parent.fontFamily = currentFont.FontFamily.Name;
                     parent.fontSize = currentFont.Size;
+                    parent.fontStyle = currentFont.Style ^ style;
 
                     infoRichTextBox.SelectionFont = new Font(parent.fontFamily, parent.fontSize, parent.fontStyle);
                 }
