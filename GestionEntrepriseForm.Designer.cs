@@ -94,6 +94,7 @@
             this.gestionEntrepriseLeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.gestionEntrepriseBottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.gestionEntrepriseFontDialog = new System.Windows.Forms.FontDialog();
+            this.policesListBox = new System.Windows.Forms.ListBox();
             this.gestionEntrepriseStatusStrip.SuspendLayout();
             this.gestionEntrepriseMenuStrip.SuspendLayout();
             this.gestionEntrepiseToolStrip.SuspendLayout();
@@ -384,7 +385,7 @@
             // policesToolStripMenuItem
             // 
             this.policesToolStripMenuItem.Name = "policesToolStripMenuItem";
-            this.policesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.policesToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
             this.policesToolStripMenuItem.Text = "&Police...";
             this.policesToolStripMenuItem.Click += new System.EventHandler(this.policesToolStripMenuItem_Click);
             // 
@@ -484,7 +485,7 @@
             this.aideToolStripButton});
             this.gestionEntrepiseToolStrip.Location = new System.Drawing.Point(5, 31);
             this.gestionEntrepiseToolStrip.Name = "gestionEntrepiseToolStrip";
-            this.gestionEntrepiseToolStrip.Size = new System.Drawing.Size(727, 28);
+            this.gestionEntrepiseToolStrip.Size = new System.Drawing.Size(766, 28);
             this.gestionEntrepiseToolStrip.TabIndex = 1;
             // 
             // nouveauToolStripButton
@@ -560,14 +561,19 @@
             // policesToolStripComboBox
             // 
             this.policesToolStripComboBox.AutoSize = false;
-            this.policesToolStripComboBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.policesToolStripComboBox.Name = "policesToolStripComboBox";
             this.policesToolStripComboBox.Size = new System.Drawing.Size(200, 28);
             this.policesToolStripComboBox.SelectedIndexChanged += new System.EventHandler(this.policesToolStripComboBox_SelectedIndexChanged);
+            this.policesToolStripComboBox.TextChanged += new System.EventHandler(this.policesToolStripComboBox_TextChanged);
             // 
             // taillesToolStripComboBox
             // 
-            this.taillesToolStripComboBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.taillesToolStripComboBox.Items.AddRange(new object[] {
+            "8",
+            "10",
+            "12",
+            "14",
+            "16"});
             this.taillesToolStripComboBox.Name = "taillesToolStripComboBox";
             this.taillesToolStripComboBox.Size = new System.Drawing.Size(121, 28);
             this.taillesToolStripComboBox.SelectedIndexChanged += new System.EventHandler(this.taillesToolStripComboBox_SelectedIndexChanged);
@@ -690,11 +696,23 @@
             this.gestionEntrepriseBottomToolStripPanel.Size = new System.Drawing.Size(1169, 46);
             this.gestionEntrepriseBottomToolStripPanel.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.QuatrePaneaux_ControlAdded);
             // 
+            // policesListBox
+            // 
+            this.policesListBox.FormattingEnabled = true;
+            this.policesListBox.ItemHeight = 16;
+            this.policesListBox.Location = new System.Drawing.Point(202, 62);
+            this.policesListBox.Name = "policesListBox";
+            this.policesListBox.Size = new System.Drawing.Size(198, 116);
+            this.policesListBox.TabIndex = 5;
+            this.policesListBox.Visible = false;
+            this.policesListBox.SelectedIndexChanged += new System.EventHandler(this.policesListBox_SelectedIndexChanged);
+            // 
             // GestionEntrepriseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 585);
+            this.Controls.Add(this.policesListBox);
             this.Controls.Add(this.gestionEntrepriseTopToolStripPanel);
             this.Controls.Add(this.gestionEntrepriseRigthToolStripPanel);
             this.Controls.Add(this.gestionEntrepriseLeftToolStripPanel);
@@ -790,6 +808,7 @@
         internal System.Windows.Forms.ToolStripMenuItem selectionnerToolStripMenuItem;
         public System.Windows.Forms.ToolStripStatusLabel visibleToolStripStatusLabel;
         private System.Windows.Forms.FontDialog gestionEntrepriseFontDialog;
+        private System.Windows.Forms.ListBox policesListBox;
     }
 }
 
