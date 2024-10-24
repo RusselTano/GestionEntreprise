@@ -48,6 +48,7 @@ namespace GestionEntreprise
             CEErreurStylePolice,
             CEErreurAlignement,
             CEErreurModification,
+            CEMotIntrouvable,
 
 
         }
@@ -72,6 +73,7 @@ namespace GestionEntreprise
             tMessagesErreursStr[(int)ce.CEErreurEdition] = "Erreur lors de l'édition : ";
             tMessagesErreursStr[(int)ce.CEErreurStylePolice] = "Erreur lors de la modification du style de la police : ";
             tMessagesErreursStr[(int)ce.CEErreurModification] = " vous ne pouver pas ouvrir sans avoir apporter de modification : ";
+            tMessagesErreursStr[(int)ce.CEMotIntrouvable] = "  : ";
 
         }
 

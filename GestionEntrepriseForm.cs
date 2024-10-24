@@ -328,6 +328,8 @@ namespace GestionEntreprise
                 {
                     client.infoRichTextBox.SelectAll();
                 }
+                else if(sender==rechercherToolStripMenuItem) 
+                { Rechercher(); }
             }
             catch (Exception ex)
             {
@@ -344,6 +346,15 @@ namespace GestionEntreprise
             {
                 DesactiverOperationsMenusBarreOutils();
                 creerOuOuvrirEmployeeToolStripStatusLabel.Text = "creer ou ouvrir un Employee";
+
+                
+                    RechercherForm oRecherche = new RechercherForm();
+                    oRecherche.Owner = this;
+                    if (oRecherche != null)
+                    {
+                        oRecherche.Close();
+                    }
+                
             }
             else
             {
@@ -424,6 +435,11 @@ namespace GestionEntreprise
                 }
                 else visibleToolStripStatusLabel.Text = "";
             }
+
+            if (e.Control && e.KeyCode == Keys.F)
+            {
+                Rechercher();
+            }
         }
         #endregion
 
@@ -498,6 +514,8 @@ namespace GestionEntreprise
             {
                 Employes client = (Employes)this.ActiveMdiChild;
                 gestionEntrepriseFontDialog.Font = client.infoRichTextBox.SelectionFont;
+                gestionEntrepriseFontDialog.MaxSize = 16;
+                gestionEntrepriseFontDialog.MinSize = 8;
 
                 if (gestionEntrepriseFontDialog.ShowDialog() == DialogResult.OK)
                     client.infoRichTextBox.SelectionFont = gestionEntrepriseFontDialog.Font;
@@ -570,6 +588,39 @@ namespace GestionEntreprise
             }
         }
         #endregion
+
+        #region Rechercher
+       
+
+        #endregion
+
+        public void Rechercher()
+        {
+            try
+            {
+                Employes client = (Employes)this.ActiveMdiChild;
+                if (this.ActiveMdiChild != null)
+                {
+                    // Création d'une nouvelle instance de RechercherForm
+                    RechercherForm oRecherche = new RechercherForm();
+                    oRecherche.Owner = this;
+
+                    // Pré-remplir avec le texte sélectionné dans le RichTextBox
+                    RichTextBox oRichTextBox = this.ActiveMdiChild.Controls[7] as RichTextBox;
+                    oRecherche.Mot= (this.ActiveMdiChild.Controls[7] as RichTextBox).SelectedText;
+
+                   oRecherche.rechercherTextBox.SelectedText=oRichTextBox.SelectedText;
+
+
+                    // Afficher la fenêtre de recherche
+                    oRecherche.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de l'ouverture de la fenêtre de recherche : " + ex.Message);
+            }
+        }
 
     }
 }

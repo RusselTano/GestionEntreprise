@@ -303,7 +303,7 @@ namespace GestionEntreprise
                         break;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show(g.tMessagesErreursStr[(int)ce.CEErreurSelection], "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -337,7 +337,7 @@ namespace GestionEntreprise
                     infoRichTextBox.SelectionFont = new Font(parent.fontFamily, parent.fontSize, parent.fontStyle);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show(g.tMessagesErreursStr[(int)ce.CEErreurPolice], "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
