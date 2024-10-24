@@ -64,7 +64,6 @@ namespace GestionEntreprise
             policesToolStripComboBox.SelectedIndexChanged -= policesToolStripComboBox_SelectedIndexChanged;
             AfficherPolicesInstallees();
             policesToolStripComboBox.SelectedIndexChanged += policesToolStripComboBox_SelectedIndexChanged;
-            AfficherTaillesPolices();
         }
         #endregion
 
@@ -419,6 +418,7 @@ namespace GestionEntreprise
         }
         #endregion
 
+<<<<<<< HEAD
         #region KeyDown CapsLock && Insert
         private void GestionEntrepriseForm_KeyDown(object sender, KeyEventArgs e)
         {
@@ -443,6 +443,8 @@ namespace GestionEntreprise
         }
         #endregion
 
+=======
+>>>>>>> a0606035fc85250dc7a2664869b6130d3c8ed764
         #region Activer
         private void ActiverOperationsMenusBarreOutils()
         {
@@ -507,6 +509,25 @@ namespace GestionEntreprise
         }
         #endregion
 
+        #region KeyDown CapsLock && Insert
+        private void GestionEntrepriseForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Control.IsKeyLocked(Keys.CapsLock)) semiVisibleToolStripStatusLabel.Text = "MAJ";
+            else semiVisibleToolStripStatusLabel.Text = "";
+
+            if (e.KeyCode == Keys.Insert)
+            {
+                if (visibleToolStripStatusLabel.Text == "INS")
+                {
+                    visibleToolStripStatusLabel.Text = "RFP";
+                    Employes client = (Employes)this.ActiveMdiChild;
+                    client.ModeInsertion = false;
+                }
+                else visibleToolStripStatusLabel.Text = "";
+            }
+        }
+        #endregion
+
         #region Typographie
         private void policesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -525,7 +546,6 @@ namespace GestionEntreprise
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void policesToolStripComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -543,7 +563,6 @@ namespace GestionEntreprise
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void taillesToolStripComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Employes client = (Employes)this.ActiveMdiChild;
@@ -552,7 +571,6 @@ namespace GestionEntreprise
             client.infoRichTextBox.SelectionFont = new Font(fontFamily, fontSize, fontStyle);
             client.infoRichTextBox.Focus();
         }
-
         private void AfficherPolicesInstallees()
         {
             try
@@ -563,24 +581,6 @@ namespace GestionEntreprise
                 {
                     policesToolStripComboBox.Items.Add(oFontFamily.Name);
                 }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void AfficherTaillesPolices()
-        {
-            try
-            {
-                // Ajoutez les tailles de police dans le ToolStripComboBox
-                taillesToolStripComboBox.Items.Add(8);
-                taillesToolStripComboBox.Items.Add(10);
-                taillesToolStripComboBox.Items.Add(12);
-                taillesToolStripComboBox.Items.Add(14);
-                taillesToolStripComboBox.Items.Add(16);
             }
             catch (Exception ex)
             {
@@ -589,6 +589,7 @@ namespace GestionEntreprise
         }
         #endregion
 
+<<<<<<< HEAD
         #region Rechercher
        
 
@@ -622,5 +623,34 @@ namespace GestionEntreprise
             }
         }
 
+=======
+        #region Rechercher police
+        private void policesToolStripComboBox_TextChanged(object sender, EventArgs e)
+        {
+            if (policesToolStripComboBox.Focused)
+            {
+                policesListBox.Visible = true;
+                policesListBox.Items.Clear();
+                string text = policesToolStripComboBox.Text.ToLower();
+
+                InstalledFontCollection oInstalledFonts = new InstalledFontCollection();
+
+                foreach (FontFamily oFontFamily in oInstalledFonts.Families)
+                {
+                    if (oFontFamily.Name.ToLower().StartsWith(text))
+                    {
+                        policesListBox.Items.Add(oFontFamily.Name);
+                    }
+                }
+            }
+        }
+        private void policesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedFont = policesListBox.SelectedItem.ToString();
+            policesToolStripComboBox.Text = selectedFont;
+            policesListBox.Visible = false;
+        }
+        #endregion
+>>>>>>> a0606035fc85250dc7a2664869b6130d3c8ed764
     }
 }
